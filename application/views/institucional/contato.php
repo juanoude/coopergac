@@ -13,28 +13,28 @@
 
         <div class="form-group">
           <label for="nome"> Nome Completo</label>
-          <input type="text" class="form-control" id="nome" placeholder="Insira seu nome">
+          <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
         </div>
 
         <div class="form-group">
           <label for="email"> Endereço de Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Insira seu email">
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Insira seu email">
           <small id="emailHelp" class="form-text text-muted">Nós nunca compartilharemos seu email</small>
         </div>
 
         <div class="form-group">
           <label for="telefone"> Telefone </label>
-          <input type="text" class="form-control" id="telefone" placeholder="Insira seu número de telefone">
+          <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Insira seu número de telefone">
         </div>
 
         <div class="form-group">
           <label for="titulo"> Título da Mensagem</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Insira o título ou assunto da mensagem">
+          <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Insira o título ou assunto da mensagem">
         </div>
 
         <div class="form-group">
           <label for="mensagem"> Mensagem</label>
-          <textarea class="form-control" id="mensagem" placeholder="Digite a mensagem aqui" rows="6"></textarea>
+          <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Digite a mensagem aqui" rows="6"></textarea>
         </div>
 
         <button type="submit" class="btn btn-success btn-right btn-center">Enviar</button>
