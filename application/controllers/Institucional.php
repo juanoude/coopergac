@@ -41,19 +41,19 @@
       $config['smtp_port'] = '465';
       $config['charset'] = 'utf-8';
       $config['mailtype'] = 'html';
-      $config['newline'] = '\r\n';
+      $config['newline'] = "\r\n";
 
       $this->email->initialize($config);
 
-      $nome = $this->input->post("nome");
-      $subject = $this->input->post("titulo");
-      $email = $this->input->post("email");
-      $mensagem = $this->input->post("mensagem");
-      $telefone = $this->input->post("telefone");
+      $nome = $this->input->post('nome');
+      $subject = $this->input->post('titulo');
+      $email = $this->input->post('email');
+      $mensagem = $this->input->post('mensagem');
+      $telefone = $this->input->post('telefone');
 
       $this->email->from("midiacoopergac@gmail.com", "Contato via site");
       $this->email->to("juanoude@gmail.com");
-      $this->email->subject("Msg-Site: {$subject}");
+      $this->email->subject('Msg-Site: '.$subject);
 
       $dados = [
         'nome' => $nome,
@@ -66,14 +66,14 @@
       $template = $this->load->view("institucional/email_template", $dados, TRUE);
 
       $this->email->message($template);
-      $this->email->send(FALSE);
 
-      // if($this->email->send(FALSE)){
+      $this->email->send(FALSE);
+      // if($this->email->send()){
       //   $this->session->set_flashdata("success", "Seu email foi enviado com sucesso");
       //   redirect("/");
       // }else{
       echo $this->email->print_debugger();
-      // $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");//
+      // $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");
       // redirect("/");
       // }
     }

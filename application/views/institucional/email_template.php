@@ -4,14 +4,14 @@
  </head>
  <body>
    <h1>Mensagem de contato do site:</h1>
-   <h2>Titulo: <?=$subject?></h2>
+   <h2>Titulo: <?= $subject ?></h2>
    <ul>
-     <li>Nome: <?=$nome?></li>
-     <li>Telefone: <?=$telefone?></li>
-     <li>Email: <?=$email?></li>
+     <li>Nome: <?= $nome ?></li>
+     <li>Telefone: <?= $telefone ?></li>
+     <li>Email: <?= $email ?></li>
    </ul>
    <p>
-     <?=$mensagem?>
+     <?= $mensagem ?>
    </p>
  </body>
 </html>
