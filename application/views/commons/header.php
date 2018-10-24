@@ -31,10 +31,10 @@
             <a class="nav-link mr-2" href="<?=base_url('sobre')?>">Sobre Nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mr-2" href="<?=base_url('blog')?>">Blog</a>
+            <a class="nav-link mr-2" href="<?=base_url('em_construcao')?>">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mr-2" href="<?=base_url('multimidia')?>">Multimídia</a>
+            <a class="nav-link mr-2" href="<?=base_url('em_construcao')?>">Multimídia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mr-2" href="<?=base_url('contato')?>">Fale Conosco</a>

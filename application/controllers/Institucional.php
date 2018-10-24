@@ -20,6 +20,24 @@
       $this->load->view("institucional/sobre", $dados);
     }
 
+    public function privacidade(){
+      $cssespecifico = "institucional.css";
+      $dados = [
+        'cssespecifico' => $cssespecifico
+      ];
+
+      $this->load->view("institucional/privacidade", $dados);
+    }
+
+    public function em_construcao(){
+      $cssespecifico = "institucional.css";
+      $dados = [
+        'cssespecifico' => $cssespecifico
+      ];
+
+      $this->load->view("em_construcao", $dados);
+    }
+
     public function contato(){
       $cssespecifico ="institucional.css";
 
@@ -52,8 +70,8 @@
       $telefone = $this->input->post('telefone');
 
       $this->email->from("midiacoopergac@gmail.com", "Contato via site");
-      $this->email->to("juanoude@gmail.com");
-      $this->email->subject('Msg-Site: '.$subject);
+      $this->email->to("contato@coopergac.com");
+      $this->email->subject($subject);
 
       $dados = [
         'nome' => $nome,
@@ -67,14 +85,14 @@
 
       $this->email->message($template);
 
-      $this->email->send(FALSE);
-      // if($this->email->send()){
-      //   $this->session->set_flashdata("success", "Seu email foi enviado com sucesso");
-      //   redirect("/");
-      // }else{
-      echo $this->email->print_debugger();
-      // $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");
-      // redirect("/");
-      // }
+      //$this->email->send(FALSE);
+      if($this->email->send()){
+        $this->session->set_flashdata("success", "Seu email foi enviado com sucesso");
+        redirect("/");
+      }else{
+      //echo $this->email->print_debugger();
+      $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");
+      redirect("/");
+      }
     }
   }

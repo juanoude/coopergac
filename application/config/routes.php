@@ -56,3 +56,4 @@ $route['sobre'] = 'institucional/sobre';
 $route['blog'] = 'blog/index';
 $route['multimidia'] = 'multimidia/index';
 $route['contato'] = 'institucional/contato';
+$route['em_construcao'] = 'institucional/em_construcao';
