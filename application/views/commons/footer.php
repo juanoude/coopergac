@@ -22,7 +22,7 @@
         <ul>
           <li>
             <a href="https://www.facebook.com/coopergac/"><i class="fab fa-facebook-square" style="font-size:40px; margin:5px;"></i></a>
-            <a id="youtube" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            <a id="youtube" href="https://www.youtube.com/channel/UCGjQQLkChBki3pMsWwZLXFQ"><i class="fab fa-youtube"></i></a>
           </li>
         </ul>
       </div>

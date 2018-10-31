@@ -11,6 +11,9 @@
 <h1 class="main-title">Galeria de Imagens</h1>
 
 
+<?print_r($galeria);?>
+
+
 
 <h1 class="main-title">Videos</h1>
 

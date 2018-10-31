@@ -23,8 +23,8 @@
 
     <div class="form-group">
       <label for="data">Insira a data da foto</label>
-      <input type="date" class="form-control" id="data">
-      <small id="fotoHelp" name="data" class="form-text text-muted">A data deve estar no fomato dd/mm/aaaa com zeros a esquerda.
+      <input type="date" name="data" class="form-control" id="data">
+      <small id="dateHelp" class="form-text text-muted">A data deve estar no fomato dd/mm/aaaa com zeros a esquerda.
         Ex:01/09/2001</small>
     </div>
 

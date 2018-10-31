@@ -4,15 +4,19 @@
   class Multimidia extends CI_Controller {
     public function index(){
       $cssespecifico = 'multimidia.css';
+      $this->load->model('multimidia_model');
+
+      $galeria = $this->multimidia_model->listar();
 
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'galeria' => $galeria
       ];
 
       $this->load->view("multimidia/index", $dados);
     }
 
-    public function novaMidia(){
+    public function nova_midia(){
       $cssespecifico = 'multimidia.css';
 
       $dados = [
@@ -23,14 +27,14 @@
 
     }
 
-    public function adicionarFoto(){
+    public function adicionar_foto(){
 
-      $data_convertida = converterDataParaBanco($this->input->post("data"));
+      //$data_convertida = converterDataParaBanco($this->input->post("data"));
 
       $metadados = array(
         "nome" => $this->input->post("nome"),
         "descricao" => $this->input->post("descricao"),
-        "data" => $data_convertida
+        "data" => $this->input->post("data")
       );
 
       $foto = $_FILES['foto'];
