@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'coopergac',
+	'hostname' => 'localhost', //shareddb1e.hosting.stackcp.net
+	'username' => 'root', //coopergac-3637d2d5
+	'password' => '', //enhrt3tnld
+	'database' => 'coopergac', //coopergac-3637d2d5
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

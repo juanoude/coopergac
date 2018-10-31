@@ -20,6 +20,24 @@
       $this->load->view("institucional/sobre", $dados);
     }
 
+    public function privacidade(){
+      $cssespecifico = "institucional.css";
+      $dados = [
+        'cssespecifico' => $cssespecifico
+      ];
+
+      $this->load->view("institucional/privacidade", $dados);
+    }
+
+    public function em_construcao(){
+      $cssespecifico = "institucional.css";
+      $dados = [
+        'cssespecifico' => $cssespecifico
+      ];
+
+      $this->load->view("em_construcao", $dados);
+    }
+
     public function contato(){
       $cssespecifico ="institucional.css";
 
@@ -92,14 +110,14 @@
 
       $this->email->message($template);
 
-      // $this->email->send(FALSE);
-      if($this->email->send(FALSE)){
+      //$this->email->send(FALSE);
+      if($this->email->send()){
         $this->session->set_flashdata("success", "Seu email foi enviado com sucesso");
         redirect("/");
       }else{
-        echo $this->email->print_debugger();
-        // $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");
-        // redirect("/");
+      //echo $this->email->print_debugger();
+      $this->session->set_flashdata("danger", "Ocorreu um problema ao enviar o email");
+      redirect("/");
       }
     }
   }
