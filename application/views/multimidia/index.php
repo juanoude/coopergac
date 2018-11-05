@@ -8,10 +8,15 @@
 <p class="alert alert-danger" role="alert" style="margin-top:10px;">  <?=$this->session->flashdata("danger"); ?></p>
 <?php endif ?>
 
-<h1 class="main-title">Galeria de Imagens</h1>
+<h1 class="main-title">Imagens</h1>
 
-
-<?print_r($galeria);?>
+<?php foreach ($galeria as $foto) : ?>
+  <div>
+    <a href='<?=base_url("multimidia/single/{$foto['id']}")?>'>
+      <img height="150" width="280" src="<?=base_url("/assets/multimidia/{$foto['id']}.jpg")?>">
+    </a>
+  </div>
+<?php endforeach ?>
 
 
 

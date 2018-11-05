@@ -12,9 +12,11 @@
 
     public function novo_post(){
       $cssespecifico = "blog.css";
+      autorizar();
       $dados = [
         'cssespecifico' => $cssespecifico
       ];
+
       $this->load->view("blog/novo_post", $dados);
     }
   }
