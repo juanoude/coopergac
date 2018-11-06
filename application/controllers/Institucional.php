@@ -4,7 +4,12 @@
   class Institucional extends CI_Controller{
     public function index(){
       $cssespecifico = "institucional.css";
+
+      $this->load->model("blog_model");
+      $capas = $this->blog_model->listarCapa();
+
       $dados = [
+        'capas' => $capas,
         'cssespecifico' => $cssespecifico
       ];
 

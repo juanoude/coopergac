@@ -38,27 +38,17 @@
     </ol>
     <!-- Slides -->
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>...</h5>
-          <p>...</p>
+      <?php $i = 0; ?>
+      <?php foreach($capas as $capa) :?>
+        <div class="carousel-item <?php if($i==0){echo "active";}?>">
+          <img class="d-block w-100" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><?=$capa['titulo']?></h5>
+            <p><?=character_limiter($capa['texto'], 120)?>...</p>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>...</h5>
-          <p>...</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>...</h5>
-          <p>...</p>
-        </div>
-      </div>
+        <?php $i++; ?>
+      <?php endforeach; ?>
     </div>
     <!-- Setas -->
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
