@@ -52,7 +52,7 @@
       <img class="card-img-top" src="<?=base_url("assets/blog/{$post['id']}.jpg")?>" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><?=$post['titulo']?></h5>
-        <p class="card-text"><?=character_limiter($post['texto'], 80)?></p>
+        <p class="card-text"><?=character_limiter(strip_tags($post['texto']), 80)?></p>
         <a href="<?=base_url("blog/single/{$post['id']}")?>" class="btn btn-outline-dark">Ler mais...</a>
       </div>
     </div>

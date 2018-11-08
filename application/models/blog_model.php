@@ -28,4 +28,11 @@
       return $query->row_array();
     }
 
+    public function atualizar($id, $titulo, $texto){
+      $this->db->set('titulo', $titulo);
+      $this->db->set('texto', $texto);
+      $this->db->where('id', $id);
+      $this->db->update('posts');
+    }
+
   }

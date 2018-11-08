@@ -52,7 +52,7 @@
       $this->form_validation->set_rules('descricao','Descrição', 'required|trim|min_length[10]');
       $this->form_validation->set_rules('data','Data', 'required|trim');
 
-      if(empty($_FILES['foto'])){
+      if($_FILES['foto']['size'] == 0){
         $this->form_validation->set_rules('foto','Foto', 'required');
       }
       //$data_convertida = converterDataParaBanco($this->input->post("data"));
@@ -93,7 +93,66 @@
         $this->session->set_flashdata("danger", "Ocorreu um erro ao enviar sua foto: $erros");
         redirect('/multimidia');
       }
-
     }
 
+    public function alterar_foto(){
+      $cssespecifico = "multimidia.css";
+      $id = $this->input->post('id');
+
+      $this->load->model("multimidia_model");
+      $midia = $this->multimidia_model->buscar($id);
+
+      $dados = [
+        'midia' => $midia,
+        'cssespecifico' => $cssespecifico
+      ];
+
+      $this->load->view("multimidia/alterar_foto", $dados);
+    }
+
+    public function atualizar(){
+      $this->form_validation->set_error_delimiters('<p class="alert alert-danger" role="alert">', '</p>' );
+
+      $this->form_validation->set_message('required', 'O campo {field} é obrigatório.');
+      $this->form_validation->set_message('min_length', 'O campo {field} deve conter no mínimo {param} caracteres.');
+
+      $this->form_validation->set_rules('nome','Nome', 'required|trim');
+      $this->form_validation->set_rules('descricao','Descrição', 'required|trim|min_length[10]');
+      $this->form_validation->set_rules('data','Data', 'required|trim');
+
+      if($this->form_validation->run() == FALSE){
+        $this->alterar_foto();
+      }else{
+        $id = $this->input->post("id");
+        $nome = $this->input->post("nome");
+        $descricao = $this->input->post("descricao");
+        $data = $this->input->post("data");
+
+        if($_FILES['foto']['size'] != 0){
+          $foto = $_FILES['foto'];
+          $this->substituirFoto($id, $foto);
+        }
+
+        $this->load->model('multimidia_model');
+        $this->multimidia_model->atualizar($id, $nome, $descricao, $data);
+
+        $this->session->set_flashdata("success", "Alteração feita com sucesso");
+        redirect("/adm/painel");
+      }
+    }
+
+    public function substituirFoto($id, $foto){
+      $config['upload_path'] = './assets/multimidia/';
+      $config['overwrite'] = TRUE;
+      $config['allowed_types'] = 'jpg';
+      $config['file_name'] = $id.'.jpg';
+
+      $this->load->library('upload', $config);
+
+      if(!$this->upload->do_upload('foto')){
+        $erros = $this->upload->display_errors();
+        $this->session->set_flashdata("danger", "Ocorreu um erro ao enviar sua foto: $erros");
+        redirect('/adm/painel');
+      }
+    }
   }

@@ -3,19 +3,17 @@
 
 <h1 class="main-title">Adicionar imagem</h1>
 <div class="container">
-  <?=form_open_multipart('multimidia/adicionar_foto'); ?>
+  <?=form_open_multipart('multimidia/atualizar'); ?>
   <?php
     $dados = [
-      'id' => "",
-      'nome_banco' => "",
-      'descricao_banco' => "",
-      'data_banco' => ""
+      'id' => $midia['id'],
+      'nome_banco' => $midia['nome'],
+      'descricao_banco' => $midia['descricao'],
+      'data_banco' => $midia['data']
     ];
 
     $this->load->view("multimidia/midia_form_template", $dados);
   ?>
-
-
 
   <?=form_close();?>
 

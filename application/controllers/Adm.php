@@ -9,7 +9,11 @@
         'cssespecifico' => $cssespecifico,
       ];
 
-      $this->load->view("adm/index", $dados);
+      if($this->session->userdata('logado')){
+        $this->painel();
+      }else{
+        $this->load->view("adm/index", $dados);
+      }
     }
 
     public function login(){
@@ -35,8 +39,16 @@
 
       autorizar();
 
+      $this->load->model("multimidia_model");
+      $this->load->model("blog_model");
+
+      $lista_blog =  $this->blog_model->listar();
+      $lista_midia = $this->multimidia_model->listar();
+
       $dados = [
-        'cssespecifico' => $cssespecifico,
+        'lista_blog' => $lista_blog,
+        'lista_midia' => $lista_midia,
+        'cssespecifico' => $cssespecifico
       ];
 
       $this->load->view("adm/painel", $dados);

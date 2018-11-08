@@ -1,15 +1,16 @@
-<?php $this->load->view("commons/header");?>
+<?php $this->load->view("commons/header") ?>
 
 
 <h1 class="main-title">Novo Post</h1>
 <div class="container">
-  <?=form_open_multipart('blog/adicionar_post'); ?>
+  <?=form_open_multipart('blog/update'); ?>
   <?php
     $dados = [
-      'id' => "",
-      'titulo_banco' => "",
-      'texto_banco' => ""
+      'id' => $post['id'],
+      'titulo_banco' => $post['titulo'],
+      'texto_banco' => $post['texto']
     ];
+
     $this->load->view("blog/post_form_template", $dados);
   ?>
 

@@ -20,4 +20,12 @@
       $this->db->where('id', $id);
       $this->db->delete('galeria');
     }
+
+    public function atualizar($id, $nome, $descricao, $data){
+      $this->db->set('nome', $nome);
+      $this->db->set('descricao', $descricao);
+      $this->db->set('data', $data);
+      $this->db->where('id', $id);
+      $this->db->update('galeria');
+    }
   }
