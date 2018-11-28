@@ -1,11 +1,18 @@
 .hero-capa {
   position:relative;
-  background-color: #b3ffda;
+  background-image: url('../images/carvao.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  /* background-color: #b3ffda; */
 }
 
-.hero-capa img {
+/* .hero-img {
   opacity: 0.5;
-}
+  height: 100%;
+  width: auto;
+} */
 
 .hero-content{
   text-align: center;

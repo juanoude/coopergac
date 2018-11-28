@@ -7,6 +7,7 @@
 
       $dados = [
         'cssespecifico' => $cssespecifico,
+        'titulo' => 'Painel de Controle'
       ];
 
       if($this->session->userdata('logado')){
@@ -48,7 +49,8 @@
       $dados = [
         'lista_blog' => $lista_blog,
         'lista_midia' => $lista_midia,
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Painel de Controle'
       ];
 
       $this->load->view("adm/painel", $dados);

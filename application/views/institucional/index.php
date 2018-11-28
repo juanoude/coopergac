@@ -1,6 +1,6 @@
 
 <?php $this->load->view("commons/header") ?>
-
+  <!-- FEEDBACK PARA O USUÁRIO -->
 <?php if(isset($_SESSION['success'])) : ?>
 <p class="alert alert-success" role="alert" style="margin-top:10px;">  <?=$this->session->flashdata("success"); ?></p>
 <?php endif ?>
@@ -9,9 +9,10 @@
 <p class="alert alert-danger" role="alert" style="margin-top:10px;">  <?=$this->session->flashdata("danger"); ?></p>
 <?php endif ?>
 
+<!-- HERO BANNER PRINCIPAL -->
 <div  class="row">
   <div class="col-md-12 hero-capa">
-    <img src="<?= base_url('assets/images/carvao.jpg')?>" class="img-fluid" alt="carvão vegetal"/>
+    <!-- <img src="<= ?base_url('assets/images/carvao.jpg')?>" class="hero-img" alt="carvão vegetal"/> -->
 
     <div class="hero-content">
       <h1 class="d-none d-lg-block display-1 hero-title">COOPERGAC</h1>
@@ -62,6 +63,7 @@
   </div>
 </div>
 
+  <!-- OS TRÊS PILARES -->
 <section class="pilares">
   <div class="row">
     <div class="col-md-4">

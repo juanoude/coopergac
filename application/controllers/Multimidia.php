@@ -10,7 +10,8 @@
 
       $dados = [
         'cssespecifico' => $cssespecifico,
-        'galeria' => $galeria
+        'galeria' => $galeria,
+        'titulo' => 'Multimídia'
       ];
 
       $this->load->view("multimidia/index", $dados);
@@ -24,7 +25,8 @@
 
       $dados = [
         'cssespecifico' => $cssespecifico,
-        'foto' => $foto
+        'foto' => $foto,
+        'titulo' => 'Foto'
       ];
 
       $this->load->view("multimidia/single", $dados);
@@ -34,7 +36,8 @@
       $cssespecifico = 'multimidia.css';
       autorizar();
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Adicionar Mídia'
       ];
 
       $this->load->view("multimidia/nova_midia", $dados);
@@ -104,7 +107,8 @@
 
       $dados = [
         'midia' => $midia,
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Editar Foto'
       ];
 
       $this->load->view("multimidia/alterar_foto", $dados);

@@ -12,7 +12,8 @@
       $dados = [
         'capas' => $capas,
         'posts' => $posts,
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Blog - Notícias - Reflexões'
       ];
 
       $this->load->view("blog/index", $dados);
@@ -22,7 +23,8 @@
       $cssespecifico = "blog.css";
       autorizar();
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Adicionando Post'
       ];
 
       $this->load->view("blog/novo_post", $dados);
@@ -84,7 +86,8 @@
 
       $dados = array(
         'cssespecifico' => $cssespecifico,
-        'post' => $post
+        'post' => $post,
+        'titulo' => "{$post['titulo']}"
       );
 
       $this->load->view("blog/single", $dados);
@@ -100,7 +103,8 @@
 
       $dados = [
         'cssespecifico' => $cssespecifico,
-        'post' => $post
+        'post' => $post,
+        'titulo' => "Editar {$post['titulo']}"
       ];
       $this->load->view("blog/alterar_post", $dados);
     }

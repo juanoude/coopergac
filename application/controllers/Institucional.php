@@ -10,7 +10,8 @@
 
       $dados = [
         'capas' => $capas,
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Página Principal'
       ];
 
       $this->load->view("institucional/index", $dados);
@@ -19,7 +20,8 @@
     public function sobre(){
       $cssespecifico = "institucional.css";
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Sobre Nós'
       ];
 
       $this->load->view("institucional/sobre", $dados);
@@ -28,7 +30,8 @@
     public function privacidade(){
       $cssespecifico = "institucional.css";
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Política de Privacidade'
       ];
 
       $this->load->view("institucional/privacidade", $dados);
@@ -37,7 +40,8 @@
     public function em_construcao(){
       $cssespecifico = "institucional.css";
       $dados = [
-        'cssespecifico' => $cssespecifico
+        'cssespecifico' => $cssespecifico,
+        'titulo' => 'Em construção'
       ];
 
       $this->load->view("em_construcao", $dados);
@@ -47,7 +51,8 @@
       $cssespecifico ="institucional.css";
 
       $dados= [
-        'cssespecifico' =>$cssespecifico
+        'cssespecifico' =>$cssespecifico,
+        'titulo' => 'Fale Conosco'
       ];
 
 
@@ -55,6 +60,8 @@
     }
 
     public function email(){
+
+      // VALIDANDO O EMAIL
       $this->form_validation->set_error_delimiters('<p class="alert alert-danger" role="alert">', '</p>' );
 
       $this->form_validation->set_message('required', 'O campo {field} é obrigatório.');

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?=base_url('assets/css/geral.css')?>" />
     <link rel="stylesheet" href="<?=base_url("assets/css/{$cssespecifico}")?>" />
 
-    <title>Hello, world!</title>
+    <title>Coopergac - <?=$titulo?></title>
   </head>
   <body>
     <!-- Navbar -->
