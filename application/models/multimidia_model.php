@@ -28,4 +28,11 @@
       $this->db->where('id', $id);
       $this->db->update('galeria');
     }
+
+    public function listarCapa(){
+      $this->db->order_by('id', 'DESC');
+      $this->db->limit(3);
+      $query = $this->db->get('galeria');
+      return $query->result_array();
+    }
   }

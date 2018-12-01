@@ -60,42 +60,22 @@
 </div>
 </section>
 
-<div class="row">
-  <!-- Carrousel -->
-  <div class="mx-auto">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <!-- Bullets -->
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <!-- Slides -->
-      <div class="carousel-inner">
-        <?php $i = 0;?>
-        <?php foreach($capas as $capa) :?>
-          <div class="carousel-item <?php if($i==0){echo "active";}?>"> <!--active no primeiro-->
-            <img class="d-block w-100" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="Slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5><?=$capa['titulo']?></h5>
-              <p><?=character_limiter($capa['texto'], 120)?>...</p>
-            </div>
+<section class="row">
+  <!-- Notícias -->
+  <div class="col-md-12 capas-wrapper">
+    <?php foreach($capas as $capa) :?>
+      <a href='<?=base_url("blog/single/{$capa['id']}")?>'>
+        <article class="capa col-md-6">
+          <img class="capa-img img-fluid" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="<?=$capa['titulo']?>">
+          <div class="capa-conteudo">
+            <h5 class="capa-titulo"><?=$capa['titulo']?></h5>
+            <p class="capa-texto lead"><?=character_limiter(strip_tags($capa['texto']), 120)?>...</p>
           </div>
-          <?php $i++; ?>
-        <?php endforeach; ?>
-      </div>
-      <!-- Setas -->
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
+        </article>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a>
-    </div>
+    <?php endforeach; ?>
   </div>
-</div>
+</section>
 
 
 <?php $this->load->view("commons/footer") ?>

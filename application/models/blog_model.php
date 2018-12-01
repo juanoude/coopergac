@@ -17,7 +17,7 @@
 
     public function listarCapa(){
       $this->db->order_by('id', 'DESC');
-      $this->db->limit(3);
+      $this->db->limit(7);
       $query = $this->db->get('posts');
       return $query->result_array();
     }

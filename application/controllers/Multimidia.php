@@ -6,11 +6,14 @@
       $cssespecifico = 'multimidia.css';
       $this->load->model('multimidia_model');
 
+
+      $capas = $this->multimidia_model->listarCapa();
       $galeria = $this->multimidia_model->listar();
 
       $dados = [
         'cssespecifico' => $cssespecifico,
         'galeria' => $galeria,
+        'capas' => $capas,
         'titulo' => 'Multimídia'
       ];
 

@@ -1,6 +1,15 @@
 
 //Quando coloco height 100%, não funciona por algum motivo, portanto:
-capa = $(".hero-capa");
+hero = $(".hero-capa");
 alturaDaTela =  (screen.height * 0.85) + "px";
 
-capa.css("height", alturaDaTela);
+hero.css("height", alturaDaTela);
+
+
+//hover effect
+capa = $(".capa");
+capa.hover(function(){
+  $(this).addClass("efeito-hover");
+}, function(){
+  $(this).removeClass("efeito-hover");
+});

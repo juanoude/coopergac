@@ -26,7 +26,7 @@
           <img class="d-block w-100" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="First slide">
           <div class="carousel-caption d-none d-md-block">
             <h5><?=$capa['titulo']?></h5>
-            <p><?=character_limiter($capa['texto'], 120)?>...</p>
+            <p><?=character_limiter(strip_tags($capa['texto']), 120)?>...</p>
           </div>
         </div>
         <?php $i++; ?>

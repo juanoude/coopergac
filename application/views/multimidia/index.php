@@ -10,8 +10,47 @@
 
 <h1 class="main-title">Imagens</h1>
 
+<div class="row">
+  <!-- Carrousel -->
+  <div class="mx-auto">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <!-- Bullets -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <?php $i = 0;?>
+        <?php foreach($capas as $capa) :?>
+          <div class="carousel-item <?php if($i==0){echo "active";}?>"> <!--active no primeiro-->
+            <a href='<?=base_url("/multimidia/single/{$capa['id']}")?>'>
+              <img class="d-block w-100" src='<?=base_url("assets/multimidia/{$capa['id']}.jpg")?>' alt="Slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5><?=$capa['nome']?></h5>
+                <p><?=character_limiter($capa['descricao'], 120)?>...</p>
+              </div>
+            </a>
+          </div>
+          <?php $i++; ?>
+        <?php endforeach; ?>
+      </div>
+      <!-- Setas -->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <?php foreach ($galeria as $foto) : ?>
-  <div>
+  <div class="d-inline">
     <a href='<?=base_url("multimidia/single/{$foto['id']}")?>'>
       <img height="150" width="280" src="<?=base_url("/assets/multimidia/{$foto['id']}.jpg")?>">
     </a>
