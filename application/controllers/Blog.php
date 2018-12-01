@@ -140,7 +140,7 @@
 
     }
 
-    public function substituirFoto(){
+    public function substituirFoto($id, $foto){
       $config['upload_path'] = './assets/blog/';
       $config['overwrite'] = TRUE;
       $config['allowed_types'] = 'jpg';

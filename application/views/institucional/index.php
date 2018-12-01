@@ -28,73 +28,74 @@
   </div>
 </div>
 
+<!-- OS TRÊS PILARES -->
+<section class="pilares">
 <div class="row">
-  <!-- Carrousel -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <!-- Bullets -->
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <!-- Slides -->
-    <div class="carousel-inner">
-      <?php $i = 0; ?>
-      <?php foreach($capas as $capa) :?>
-        <div class="carousel-item <?php if($i==0){echo "active";}?>">
-          <img class="d-block w-100" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5><?=$capa['titulo']?></h5>
-            <p><?=character_limiter($capa['texto'], 120)?>...</p>
-          </div>
-        </div>
-        <?php $i++; ?>
-      <?php endforeach; ?>
-    </div>
-    <!-- Setas -->
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
-    </a>
+  <div class="col-md-4">
+    <i class="fas fa-book" style="font-size:40px"></i>
+    <h4>Educação</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <i class="fas fa-tree" style="font-size:40px"></i>
+    <h4>Sustentabilidade</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <i class="fas fa-hands-helping" style="font-size:40px"></i>
+    <h4>Respeito</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+    </p>
   </div>
 </div>
-
-  <!-- OS TRÊS PILARES -->
-<section class="pilares">
-  <div class="row">
-    <div class="col-md-4">
-      <i class="fas fa-book" style="font-size:40px"></i>
-      <h4>Educação</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <i class="fas fa-tree" style="font-size:40px"></i>
-      <h4>Sustentabilidade</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <i class="fas fa-hands-helping" style="font-size:40px"></i>
-      <h4>Respeito</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      </p>
-    </div>
+<div class="row">
+  <div class="col">
+    <a href="<?= base_url('sobre')?>" class="pilares-btn btn btn-secondary btn-lg"> Saiba Mais</a>
   </div>
-  <div class="row">
-    <div class="col">
-      <a href="<?= base_url('sobre')?>" class="btn btn-outline-success btn-lg"> Saiba Mais</a>
-    </div>
-  </div>
+</div>
 </section>
 
+<div class="row">
+  <!-- Carrousel -->
+  <div class="mx-auto">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <!-- Bullets -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <?php $i = 0;?>
+        <?php foreach($capas as $capa) :?>
+          <div class="carousel-item <?php if($i==0){echo "active";}?>"> <!--active no primeiro-->
+            <img class="d-block w-100" src='<?=base_url("assets/blog/{$capa['id']}.jpg")?>' alt="Slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><?=$capa['titulo']?></h5>
+              <p><?=character_limiter($capa['texto'], 120)?>...</p>
+            </div>
+          </div>
+          <?php $i++; ?>
+        <?php endforeach; ?>
+      </div>
+      <!-- Setas -->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </div>
+</div>
 
 
 <?php $this->load->view("commons/footer") ?>

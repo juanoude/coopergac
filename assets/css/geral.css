@@ -2,6 +2,10 @@ body {
   margin-top: 80px;
 }
 
+.alert{
+  margin-top: 10px;
+}
+
 .btn-center{
   margin:auto;
   width:200px;
