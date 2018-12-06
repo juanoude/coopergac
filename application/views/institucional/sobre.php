@@ -7,19 +7,10 @@ $this->load->view("commons/header");
     <h1 class="titulo">QUEM SOMOS</h1>
     <h2>Introdução</h2>
     <p>
-      Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputaLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.te. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-
+      <img class="img-intro img-fluid" src='<?=base_url("assets/images/logo-coopergac.jpg")?>' />
+        <iframe class="" height="400" width="600" src="https://www.youtube.com/embed/CWb2X1abqkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
-    <img src="<?=base_url('assets/images/banner.jpg')?>" alt="banner coopergac" class="img-fluid">
+
 
     <h2>Significado</h2>
     <p>
@@ -92,10 +83,7 @@ $this->load->view("commons/header");
     <div class="col-md-6">
       <h2>Pilares</h2>
       <p>
-        Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.consectetur adipiscing elit. Pellentesque eu nisl
-        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        consectetur adipiscing elit. Pellentesque eu nisl
         augue. Proin egestas odio ac tempor vulputaLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
         augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.te. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
