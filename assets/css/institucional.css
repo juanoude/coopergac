@@ -50,7 +50,7 @@
   color: #FFF;
   text-align: center;
   padding: 60px 0px 40px 0px;
-  background-color: #C3CBA4;
+  background-color: #28a745;
 }
 
 .pilares-banner i{
@@ -117,11 +117,35 @@
 
 /* Página SOBRE NóS: */
 
+.sobre-intro {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
 .img-intro {
-  max-width: 320px;
-  float: right;
+  margin: 40px 0px;
+  height: 320px;
+  width: 320px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 .video-intro {
-  max-width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.sobre-trecho-1 {
+  margin-top: 30px
 }

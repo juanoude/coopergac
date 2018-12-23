@@ -4,27 +4,33 @@ $this->load->view("commons/header");
 
 <div class="row">
   <div class="col-12 banner">
+
     <h1 class="titulo">QUEM SOMOS</h1>
-    <h2>Introdução</h2>
-    <p>
-      <img class="img-intro img-fluid" src='<?=base_url("assets/images/logo-coopergac.jpg")?>' />
-        <iframe class="" height="400" width="600" src="https://www.youtube.com/embed/CWb2X1abqkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
 
+    <div class="sobre-intro">
+      <img class="img-intro" src='<?=base_url("assets/images/logo-coopergac.jpg")?>' />
+    </div>
 
-    <h2>Significado</h2>
-    <p>
-      Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputaLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.te. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
-      augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
-    </p>
+    <div class="iframe-wrapper">
+      <iframe class="video-intro" src="https://www.youtube.com/embed/CWb2X1abqkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="sobre-trecho-1">
+      <h2>Significado</h2>
+      <p>
+        Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputaLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.te. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nisl
+        augue. Proin egestas odio ac tempor vulputate. Nulla vestibulum imperdiet pretium. Sed pellentesque aliquam congue.
+      </p>
+    </div>
+
 
     <h2>Objetivos</h2>
     <p>
